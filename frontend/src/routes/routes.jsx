@@ -1,12 +1,12 @@
 import HomePage from "../pages/HomePage";
-// import PersonDetail from "../pages/PersonDetail";
-// import FavoriteList from "../pages/FavoriteList";
-// import MediaDetail from "../pages/MediaDetail";
-// import MediaList from "../pages/MediaList";
-// import MediaSearch from "../pages/MediaSearch";
-// import PasswordUpdate from "../pages/PasswordUpdate";
-// import ReviewList from "../pages/ReviewList";
-// import ProtectedPage from "../components/common/ProtectedPage";
+import PersonDetail from "../pages/PersonDetail";
+import FavoriteList from "../pages/FavoriteList";
+import MediaDetail from "../pages/MediaDetail";
+import MediaList from "../pages/MediaList";
+import MediaSearch from "../pages/MediaSearch";
+import PasswordUpdate from "../pages/PasswordUpdate";
+import ReviewList from "../pages/ReviewList";
+import ProtectedPage from "../components/common/ProtectedPage";
 
 export const routesGen = {
   home: "/",
@@ -16,60 +16,60 @@ export const routesGen = {
   person: (id) => `/person/${id}`,
   favoriteList: "/favorites",
   reviewList: "/reviews",
-  passwordUpdate: "password-update",
+  passwordUpdate: "password-update"
 };
 
 const routes = [
   {
     index: true,
     element: <HomePage />,
-    state: "home",
+    state: "home"
   },
-  // {
-  //   path: "/person/:personId",
-  //   element: <PersonDetail />,
-  //   state: "person.detail",
-  // },
-  // {
-  //   path: "/search",
-  //   element: <MediaSearch />,
-  //   state: "search",
-  // },
-  // {
-  //   path: "/password-update",
-  //   element: (
-  //     <ProtectedPage>
-  //       <PasswordUpdate />
-  //     </ProtectedPage>
-  //   ),
-  //   state: "password.update",
-  // },
-  // {
-  //   path: "/favorites",
-  //   element: (
-  //     <ProtectedPage>
-  //       <FavoriteList />
-  //     </ProtectedPage>
-  //   ),
-  //   state: "favorites",
-  // },
-  // {
-  //   path: "/reviews",
-  //   element: (
-  //     <ProtectedPage>
-  //       <ReviewList />
-  //     </ProtectedPage>
-  //   ),
-  //   state: "reviews",
-  // },
-  // {
-  //   path: "/:mediaType",
-  //   element: <MediaList />,
-  // },
-  // {
-  //   path: "/:mediaType/:mediaId",
-  //   element: <MediaDetail />,
-  // },
+  {
+    path: "/person/:personId",
+    element: <PersonDetail />,
+    state: "person.detail"
+  },
+  {
+    path: "/search",
+    element: <MediaSearch />,
+    state: "search"
+  },
+  {
+    path: "/password-update",
+    element: (
+      <ProtectedPage>
+        <PasswordUpdate />
+      </ProtectedPage>
+    ),
+    state: "password.update"
+  },
+  {
+    path: "/favorites",
+    element: (
+      <ProtectedPage>
+        <FavoriteList />
+      </ProtectedPage>
+    ),
+    state: "favorites"
+  },
+  {
+    path: "/reviews",
+    element: (
+      <ProtectedPage>
+        <ReviewList />
+      </ProtectedPage>
+    ),
+    state: "reviews"
+  },
+  {
+    path: "/:mediaType",
+    element: <MediaList />
+  },
+  {
+    path: "/:mediaType/:mediaId",
+    element: <MediaDetail />
+  }
 ];
 
 export default routes;

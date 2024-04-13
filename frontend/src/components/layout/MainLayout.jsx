@@ -55,7 +55,12 @@ const MainLayout = () => {
         {/* header */}
 
         {/* main */}
-        <Box component="main" flexGrow={1} overflow="hidden" minHeight="100vh">
+        <Box
+          component="main"
+          flexGrow={1}
+          overflow="hidden"
+          minHeight="100vh"
+        >
           <Outlet />
         </Box>
         {/* main */}
